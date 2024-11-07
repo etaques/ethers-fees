@@ -10,6 +10,7 @@ import {
   MaxFeeSuggestions,
   MaxPriorityFeeSuggestions,
   Suggestions,
+  Reward,
 } from './entities';
 import {
   calculateBaseFeeTrend,
