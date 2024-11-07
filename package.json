@@ -1,9 +1,12 @@
 {
-  "name": "@etaques/fee-suggestions",
+  "name": "@etaques/ethers-fees",
   "description": "JavaScript library that suggests fees on Ethereum after EIP-1559 using historical data using ethers.js",
-  "version": "2.1.1",
+  "version": "1.0.0",
   "main": "dist/index.js",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [
     "javascript",
     "ethereum",
@@ -14,12 +17,12 @@
   ],
   "author": "Bruno Barbieri",
   "bugs": {
-    "url": "https://github.com/etaques/fee-suggestions/issues"
+    "url": "https://github.com/etaques/ethers-fees/issues"
   },
-  "homepage": "https://github.com/etaques/fee-suggestions#readme",
+  "homepage": "https://github.com/etaques/ethers-fees#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/etaques/fee-suggestions.git"
+    "url": "git+https://github.com/etaques/ethers-fees.git"
   },
   "scripts": {
     "start": "ts-node demo.ts",
