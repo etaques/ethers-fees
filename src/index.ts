@@ -129,18 +129,19 @@ export const suggestMaxPriorityFee = async (
   const blocksRewards = baseFeePerGas.map((baseFee, i) => {
     const gasRatio = gasUsedRatio[i];
     // Calculate reward (gas fee = baseFee * gasUsedRatio)
-    return weiToGweiNumber(baseFee) * gasRatio; // You may need to adjust depending on the desired units (e.g., Gwei)
+    return (weiToGweiNumber(baseFee) * gasRatio).toString(); // Convert to string to match Reward type
   });
 
   // Get outlier blocks based on the reward calculation (adjust index if necessary)
   const outlierBlocks = getOutlierBlocksToRemove(blocksRewards, 0);
 
   // Process rewards based on outlier removal (using reward indices for different percentiles)
-  const [blocksRewardsPerc10, blocksRewardsPerc15, blocksRewardsPerc30, blocksRewardsPerc45] = [
-    0, 1, 2, 3
-  ].map((index) => rewardsFilterOutliers(blocksRewards, outlierBlocks, index));
+  const blocksRewardsPerc10 = rewardsFilterOutliers(blocksRewards, outlierBlocks, 0);
+  const blocksRewardsPerc15 = rewardsFilterOutliers(blocksRewards, outlierBlocks, 1);
+  const blocksRewardsPerc30 = rewardsFilterOutliers(blocksRewards, outlierBlocks, 2);
+  const blocksRewardsPerc45 = rewardsFilterOutliers(blocksRewards, outlierBlocks, 3);
 
-  // Calculate EMA for each percentiles
+  // Calculate EMA for each percentile
   const emaPerc10 = ema(blocksRewardsPerc10, blocksRewardsPerc10.length).pop();
   const emaPerc15 = ema(blocksRewardsPerc15, blocksRewardsPerc15.length).pop();
   const emaPerc30 = ema(blocksRewardsPerc30, blocksRewardsPerc30.length).pop();
@@ -176,6 +177,7 @@ export const suggestMaxPriorityFee = async (
     },
   };
 };
+
 
 export const suggestFees = async (
   provider: JsonRpcProvider
