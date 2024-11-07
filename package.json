@@ -25,7 +25,7 @@
     "url": "git+https://github.com/etaques/ethers-fees.git"
   },
   "scripts": {
-    "start": "ts-node demo.ts",
+    "start": "node test/test.js",
     "build": "tsc",
     "publish:release": "npm run build && npm publish",
     "lint": "npm run lint:ts && npm run lint:js",
