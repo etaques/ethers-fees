@@ -14,9 +14,9 @@
   ],
   "author": "Bruno Barbieri",
   "bugs": {
-    "url": "https://github.com/rainbow-me/eip-1559-fee-suggestions/issues"
+    "url": "https://github.com/etaques/fee-suggestions/issues"
   },
-  "homepage": "https://github.com/rainbow-me/eip-1559-fee-suggestions#readme",
+  "homepage": "https://github.com/etaques/fee-suggestions#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/etaques/fee-suggestions.git"
@@ -33,18 +33,18 @@
     "@ethersproject/providers": "^5.5.0",
     "bignumber.js": "^9.0.1",
     "ethers": "^5.4.2",
-    "moving-averages": "^4.0.6"
+    "yarn": "^1.22.22"
   },
   "devDependencies": {
     "@types/node": "^16.11.1",
     "@typescript-eslint/eslint-plugin": "^5.2.0",
     "@typescript-eslint/parser": "^5.2.0",
-    "eslint": "^8.1.0",
+    "eslint": "^7.32.0",
     "eslint-config-rainbow": "^2.0.1",
     "eslint-plugin-jest": "^25.2.2",
     "nodemon": "^2.0.12",
     "prettier": "^2.3.2",
     "ts-node": "^10.1.0",
-    "typescript": "^4.3.5"
+    "typescript": "^4.9.5"
   }
 }
