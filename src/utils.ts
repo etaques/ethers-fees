@@ -128,13 +128,20 @@ export const getOutlierBlocksToRemove = (
 };
 
 export const rewardsFilterOutliers = (
-  blocksRewards: Reward[],
+  blocksRewards: Reward[], // assuming Reward is still string[] type
   outlierBlocks: number[],
   rewardIndex: number
-) =>
-  blocksRewards
-    .filter((_, index) => !outlierBlocks.includes(index))
-    .map((reward) => weiToGweiNumber(reward[rewardIndex]));
+) => {
+  return blocksRewards
+    .filter((_, index) => !outlierBlocks.includes(index)) // Remove outliers
+    .map((reward) => {
+      if (reward && reward[rewardIndex] !== undefined) {
+        return weiToGweiNumber(reward[rewardIndex]);
+      }
+      return 0; // Return a default value or handle the case where the index is out of bounds
+    });
+};
+
 
 const calculateGroupInfo = (baseFees: number[]) => {
   const sortedBaseFees = baseFees.sort((a, b) => a - b);
