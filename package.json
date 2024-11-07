@@ -29,7 +29,7 @@
     "lint:js": "eslint --cache --ext '.ts,.tsx,.js,.jsx' .",
     "lint:ts": "npm run tsc --skipLibCheck --noEmit",
     "tsc": "tsc",
-    "postinstall": "npm run build"  // This will automatically run build after installation
+    "postinstall": "npm run build"
   },
   "dependencies": {
     "@ethersproject/providers": "^5.5.0",
