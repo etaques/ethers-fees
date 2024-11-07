@@ -1,5 +1,5 @@
 {
-  "name": "@etaques/ethers-fees",
+  "name": "@everton.taques/ethers-fees",
   "description": "JavaScript library that suggests fees on Ethereum after EIP-1559 using historical data using ethers.js",
   "version": "1.0.0",
   "main": "dist/index.js",
