@@ -23,7 +23,7 @@
   },
   "scripts": {
     "start": "ts-node demo.ts",
-    "build": "npm run tsc",
+    "build": "tsc",
     "publish:release": "npm run build && npm publish",
     "lint": "npm run lint:ts && npm run lint:js",
     "lint:js": "eslint --cache --ext '.ts,.tsx,.js,.jsx' .",
