@@ -134,13 +134,13 @@ export const suggestMaxPriorityFee = async (
   });
 
   // Get outlier blocks based on the reward calculation (adjust index if necessary)
-  const outlierBlocks = getOutlierBlocksToRemove(blocksRewards as Reward[], 0);
+  const outlierBlocks = getOutlierBlocksToRemove(blocksRewards as unknown as Reward[], 0);
 
   // Process rewards based on outlier removal (using reward indices for different percentiles)
-  const blocksRewardsPerc10 = rewardsFilterOutliers(blocksRewards as Reward[], outlierBlocks, 0);
-  const blocksRewardsPerc15 = rewardsFilterOutliers(blocksRewards as Reward[], outlierBlocks, 1);
-  const blocksRewardsPerc30 = rewardsFilterOutliers(blocksRewards as Reward[], outlierBlocks, 2);
-  const blocksRewardsPerc45 = rewardsFilterOutliers(blocksRewards as Reward[], outlierBlocks, 3);
+  const blocksRewardsPerc10 = rewardsFilterOutliers(blocksRewards as unknown as Reward[], outlierBlocks, 0);
+  const blocksRewardsPerc15 = rewardsFilterOutliers(blocksRewards as unknown as Reward[], outlierBlocks, 1);
+  const blocksRewardsPerc30 = rewardsFilterOutliers(blocksRewards as unknown as Reward[], outlierBlocks, 2);
+  const blocksRewardsPerc45 = rewardsFilterOutliers(blocksRewards as unknown as Reward[], outlierBlocks, 3);
 
   // Calculate EMA for each percentile
   const emaPerc10 = ema(blocksRewardsPerc10, blocksRewardsPerc10.length).pop();
