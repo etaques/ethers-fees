@@ -3,7 +3,6 @@
   "description": "JavaScript library that suggest fees on Ethereum after EIP-1559 using historical data using ethers.js",
   "version": "2.1.0",
   "main": "dist/index.js",
-  "typings": "dist/index.d.ts",
   "license": "MIT",
   "keywords": [
     "javascript",
@@ -34,14 +33,13 @@
     "@ethersproject/providers": "^5.5.0",
     "bignumber.js": "^9.0.1",
     "ethers": "^5.4.2",
-    "moving-averages": "^4.0.6",
     "yarn": "^1.22.22"
   },
   "devDependencies": {
     "@types/node": "^16.11.1",
     "@typescript-eslint/eslint-plugin": "^5.2.0",
     "@typescript-eslint/parser": "^5.2.0",
-    "eslint": "^8.1.0",
+    "eslint": "^7.32.0",
     "eslint-config-rainbow": "^2.0.1",
     "eslint-plugin-jest": "^25.2.2",
     "nodemon": "^2.0.12",
