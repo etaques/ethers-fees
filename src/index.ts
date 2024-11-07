@@ -1,6 +1,6 @@
 import { JsonRpcProvider } from '@ethersproject/providers';
 import { utils } from 'ethers';
-import { ema } from 'moving-averages';
+import { ema } from './moving-averages';
 import {
   BASE_FEE_ADDITIONAL_PADDING,
   BASE_FEE_BLOCKS_TO_CONFIRMATION_MULTIPLIERS,
