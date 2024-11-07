@@ -1,7 +1,7 @@
 {
   "name": "@everton.taques/ethers-fees",
   "description": "JavaScript library that suggests fees on Ethereum after EIP-1559 using historical data using ethers.js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/index.js",
   "license": "MIT",
   "publishConfig": {
@@ -15,7 +15,7 @@
     "web3",
     "dapp"
   ],
-  "author": "Bruno Barbieri",
+  "author": "Everton Taques",
   "bugs": {
     "url": "https://github.com/etaques/ethers-fees/issues"
   },
